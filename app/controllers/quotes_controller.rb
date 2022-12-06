@@ -1,4 +1,5 @@
 class QuotesController < ApplicationController
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     def index
         quotes = Quote.all
         render json: quotes
@@ -11,12 +12,17 @@ class QuotesController < ApplicationController
 
     def create
         quote = Quote.create(quote_params) 
-        render json: quote, status: :created
+        render json: quote
+    rescue ActiveRecord::RecordInvalid => e
+        render json: { errors: e.record.errors.full_messages }, status: :unprocessable_entity
     end
 
     def update
         quote = Quote.find(params[:id])
-        quote.update(description: params[:description])
+        quote.update(quote_params)
+        render json: quote
+    rescue ActiveRecord::RecordInvalid => e
+        render json: { errors: e.record.errors.full_messages }, status: :unprocessable_entity
     end
 
    def destroy 
@@ -29,6 +35,10 @@ private
 
 def quote_params
     params.permit(:category, :description)
+end
+
+def render_not_found_response
+    render json: { error: "Quote not found" }, status: :not_found
 end
 
 end
