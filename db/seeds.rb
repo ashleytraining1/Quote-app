@@ -2,11 +2,18 @@ puts "🌱 Seeding quotes..."
 
 
 puts "Creating users..."
-User.create(name: Faker::Name.name)
-User.create(name: Faker::Name.name)
-User.create(name: Faker::Name.name)
-User.create(name: Faker::Name.name)
-User.create(name: Faker::Name.name)
+# User.create(name: Faker::Name.name)
+# User.create(name: Faker::Name.name)
+# User.create(name: Faker::Name.name)
+# User.create(name: Faker::Name.name)
+# User.create(name: Faker::Name.name)
+
+User.create(name: "Ashyy", password: "1001")
+User.create(name: "Mau" , password: "1001")
+User.create(name: "Mula", password: "1001")
+User.create(name: "Bhan", password: "1001")
+User.create(name: "Kira", password: "1001")
+
 
 
   Quote.create( category: "Love", description: "Spread love everywhere you go. Let no one ever come to you without leaving happier") 
