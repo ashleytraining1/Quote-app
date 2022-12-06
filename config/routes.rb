@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   get '*path', to: 'pages#index',via: :all
+  
+  post "/login", to: "sessions#create"
+  get "/me", to: "users#show"
+  delete "/logout", to: "sessions#destroy"
 end
