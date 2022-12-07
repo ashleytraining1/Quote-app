@@ -12,7 +12,7 @@ class QuotesController < ApplicationController
 
     def create
         quote = Quote.create(quote_params) 
-        render json: quote
+        render json: quote, status: :created
     rescue ActiveRecord::RecordInvalid => e
         render json: { errors: e.record.errors.full_messages }, status: :unprocessable_entity
     end
