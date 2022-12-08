@@ -6,10 +6,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root 'pages#index'
-
-  get '*path', to: 'pages#index',via: :all
-  
   get '/me', to: 'users#show'
 
   post '/login', to: 'sessions#create'
