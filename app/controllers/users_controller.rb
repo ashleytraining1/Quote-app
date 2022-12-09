@@ -14,14 +14,12 @@ class UsersController < ApplicationController
         end
     end 
 
-    
     def create
         user = User.create!(user_params)
         render json: user
     rescue ActiveRecord::RecordInvalid => e
         render json: { errors: e.record.errors.full_messages }, status: :unprocessable_entity
     end
-
 
    def update
         user = User.find(params[:id])
@@ -33,7 +31,6 @@ class UsersController < ApplicationController
         user.destroy
         head :no_content
     end
-
 
     private
 
