@@ -31,6 +31,10 @@ Frontend :
 Backend :
    https://quote-app-production.up.railway.app(not fetching data)
 
+   # FRONTEND GITHUB LINK
+
+   https://github.com/ashleytraining1/Quote-frontend
+
    # LOGIN
 
 when loging in only the names in the backend are what will allow you to view the quotes
