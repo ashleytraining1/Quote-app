@@ -21,7 +21,16 @@ cd -run: rails g resource(this it to create migrations,models and controllers )
 -Once you have created the seeds run: rails db:migrate db:seed(to run migrations and update the schema and to generate the seeded data to your tables)
 -run: rails s(to run your server)
 -open postman to test whether your API is working and whether the data is being fetched using the following link:
-http://localhost:8000
+http://localhost:3000
+
+### Deployment
+
+Frontend :
+   https://quote-frontend-deployed.netlify.app
+
+Backend :
+   https://quote-app-production.up.railway.app
+
 
 # ENDPOINTS
 
