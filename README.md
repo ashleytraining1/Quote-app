@@ -29,7 +29,18 @@ Frontend :
    https://quote-frontend-deployed.netlify.app
 
 Backend :
-   https://quote-app-production.up.railway.app
+   https://quote-app-production.up.railway.app(not fetching data)
+
+   # LOGIN
+
+when loging in only the names in the backend are what will allow you to view the quotes
+This are:
+Mau - 1001
+Ashyy - 1001
+
+# QUOTES
+
+click the All button to view  all the quotes
 
 
 # ENDPOINTS
