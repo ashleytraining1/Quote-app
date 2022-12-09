@@ -30,6 +30,7 @@ Frontend :
 
 Backend :
    https://quote-app-production.up.railway.app(not fetching data)
+   https://quote-app-production-6145.up.railway.app/ (with the bug)
 
    # FRONTEND GITHUB LINK
 
